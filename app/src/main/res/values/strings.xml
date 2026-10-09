@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Raceday</string>
+
+    <!-- Tap menu items -->
+    <string name="menu_start_sequence">start</string>
+    <string name="menu_next_leg">next leg</string>
+    <string name="menu_finish_race">finish race</string>
+    <string name="menu_show_results">results</string>
+
+    <string name="sog_label">SOG (knots)</string>
+    <string name="heading_label">HEADING</string>
+    <!-- Heading from a compass, or GPS course over ground; magnetic (°M) or true (°T) -->
+    <string name="heading_label_magnetic">HDG °M</string>
+    <string name="heading_label_true">HDG °T</string>
+    <string name="cog_label_magnetic">COG °M</string>
+    <string name="cog_label_true">COG °T</string>
+    <string name="sog_default">--.-</string>
+    <string name="heading_default">---°</string>
+    <string name="sog_format">%.1f</string>
+    <string name="heading_format">%03d°</string>
+    <string name="nmea_status">UDP :%1$d · IP %2$s · packets: %3$d</string>
+    <string name="nmea_status_no_wifi">no Wi-Fi</string>
+    <string name="nmea_status_checks">Listening: %1$s · Mcast lock: %2$s · Self-test: %3$s</string>
+    <string name="nmea_check_yes">yes</string>
+    <string name="nmea_check_no">NO</string>
+    <string name="nmea_self_test_pending">not received</string>
+    <string name="nmea_self_test_received">received</string>
+    <string name="nmea_self_test_failed">send failed (%1$s)</string>
+    <string name="nmea_status_error">Error: %1$s</string>
+    <string name="nmea_status_last">Last: %1$s</string>
+
+    <string name="timer_label">START SEQUENCE</string>
+    <string name="timer_default">05:00</string>
+    <string name="flag_status_ready">READY (Tap to start)</string>
+    <string name="race_label">RACE</string>
+    <string name="finished_label">FINISHED</string>
+    <string name="leg_label">LEG %d</string>
+
+    <!-- Results card -->
+    <string name="results_total">Total</string>
+    <string name="leg_label_results">Leg %d</string>
+</resources>

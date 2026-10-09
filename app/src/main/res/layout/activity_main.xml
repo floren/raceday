@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="6dp"
+    tools:context=".MainActivity">
+
+    <!-- Vertical guideline splitting screen 50/50 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalCenterGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <!-- Horizontal guideline splitting left half top/bottom -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftHorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <!-- TOP LEFT: Speed over Ground (SOG) -->
+    <LinearLayout
+        android:id="@+id/sogContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingStart="2dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintBottom_toTopOf="@id/leftHorizontalGuideline"
+        app:layout_constraintEnd_toStartOf="@id/verticalCenterGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/sogLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sog_label"
+            android:textColor="@color/gray_light"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sogValue"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="@string/sog_default"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="120sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            tools:text="12.4" />
+    </LinearLayout>
+
+    <!-- BOTTOM LEFT: Heading -->
+    <LinearLayout
+        android:id="@+id/headingContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingStart="2dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalCenterGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/leftHorizontalGuideline">
+
+        <TextView
+            android:id="@+id/headingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heading_label"
+            android:textColor="@color/gray_light"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headingValue"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="@string/heading_default"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="120sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            tools:text="245°" />
+
+        <!-- Receiver diagnostics, shown only while there's no NMEA data -->
+        <TextView
+            android:id="@+id/nmeaStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_light"
+            android:textSize="11sp"
+            android:visibility="gone"
+            tools:text="UDP :10110 · IP 192.168.1.23 · packets: 0"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <!-- RIGHT HALF: Sailing Start Sequence Timer -->
+    <LinearLayout
+        android:id="@+id/rightPanel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="2dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/verticalCenterGuideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/timerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timer_label"
+            android:textColor="@color/gray_light"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/timerValue"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="@string/timer_default"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="120sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            tools:text="05:00" />
+
+        <!-- Current leg, shown below the total race time once the race has started -->
+        <TextView
+            android:id="@+id/legLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="LEG 2"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/legValue"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:autoSizeMaxTextSize="120sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            tools:text="3:27"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/flagStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flag_status_ready"
+            android:textColor="@color/gray_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="READY (Voice/Tap to start)" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

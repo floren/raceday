@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App icon: outline of a gaff-rigged sailboat, white on transparent like Glass's own icons.
+     The build turns this into PNGs for Glass (API 19), which can't draw vectors itself. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Mainsail (gaff rig): tack, throat on the mast, peak at the end of the angled gaff, clew -->
+    <path
+        android:pathData="M19,28 L19,14 L6,5 Q4,16 3.5,28 Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.6"
+        android:strokeLineJoin="round" />
+
+    <!-- Mast, above the throat -->
+    <path
+        android:pathData="M19,13 L19,9"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round" />
+
+    <!-- Jib, set flying from the bowsprit -->
+    <path
+        android:pathData="M21,11 L44,30 L25,28 Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.6"
+        android:strokeLineJoin="round" />
+
+    <!-- Hull, with bowsprit -->
+    <path
+        android:pathData="M6,31 L40,31 Q37,38 29,38.5 L15,38.5 Q8,37.5 6,31 Z M40,31 L45,30"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Water -->
+    <path
+        android:pathData="M3,43 Q6,41 9,43 T15,43 T21,43 T27,43 T33,43 T39,43 T45,43"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeLineCap="round" />
+</vector>

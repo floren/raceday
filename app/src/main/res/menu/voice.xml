@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "ok glass" menu, enabled only while racing. Titles must be approved Glass command names
+     (ContextualMenus.Command), which Glass turns into the spoken phrases. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- "next track" -->
+    <item
+        android:id="@id/action_next_leg"
+        android:title="NEXT_TRACK"
+        tools:ignore="HardcodedText" />
+    <!-- "stop the timer" -->
+    <item
+        android:id="@id/action_finish_race"
+        android:title="STOP_THE_TIMER"
+        tools:ignore="HardcodedText" />
+</menu>

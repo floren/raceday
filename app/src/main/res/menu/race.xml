@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tap menu, shown during the race and after the finish (voice.xml has the "ok glass" versions of
+     next leg and finish).
+     Visibility is set per timer state in MainActivity.onPreparePanel. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_start_sequence"
+        android:title="@string/menu_start_sequence" />
+    <item
+        android:id="@+id/action_next_leg"
+        android:title="@string/menu_next_leg" />
+    <item
+        android:id="@+id/action_finish_race"
+        android:title="@string/menu_finish_race" />
+    <item
+        android:id="@+id/action_show_results"
+        android:title="@string/menu_show_results" />
+</menu>
