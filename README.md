@@ -3,6 +3,7 @@
 An application for use when racing sailboats. It shows speed over ground and heading (streamed from OpenCPN), as well as a start sequence countdown and race timer. Tested on Glass Explorer Edition XE-C.
 
 ![](images/hero.png)
+
 *Above: sailing on a 35-degree heading at 1.7 knots, 54 seconds before the race starts.*
 
 Nota bene: this project is vibecoded, because I don't know how to write Kotlin yet. Since it runs only on an outdated piece of experimental hardware, the risk isn't great, but who knows? It could brick your Glass, I dunno.
